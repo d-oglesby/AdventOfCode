@@ -1,0 +1,11 @@
+input = open("C:/AdventOfCode/input_1.txt").read()
+input_split = input.splitlines()
+input_int = [int(i) for i in input_split]
+
+increase = 0
+
+for i, x in enumerate(input_split[1:], start = 1):
+    if input_int[i - 1] < input_int[i]:
+        increase += 1
+
+print(increase)
