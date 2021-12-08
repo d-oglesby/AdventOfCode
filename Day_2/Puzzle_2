@@ -1,0 +1,24 @@
+input = open("C:/AdventOfCode/input_2.txt").read()
+input_split = input.splitlines()
+input_split = list(map(str.split, input_split))
+
+horiz = 0
+aim = 0
+depth = 0
+
+for elem in input_split:
+
+    if elem[0][0] == 'f':
+        horiz += int(elem[1])
+        depth += int(elem[1]) * aim
+    
+    elif elem[0][0] == 'u':
+        aim -= int(elem[1])
+    
+    elif elem[0][0] == 'd':
+        aim += int(elem[1])
+        
+        
+print(horiz * depth)
+    
+    
